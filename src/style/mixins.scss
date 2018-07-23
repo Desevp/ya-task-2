@@ -6,26 +6,58 @@
 
 // Title H1
 @mixin titleH1($color) {
-  @include font(48px, $font-family, 56px);
+  @include font(24px, $font-family, 28px);
   font-weight: 600;
   color: $color;
 }
 
-@mixin normalString($color) {
-  @include font(14px, $font-family, 18px);
+// Title H2
+@mixin titleH2($color) {
+  @include font(18px, $font-family, 21px);
+  font-weight: 600;
+  color: $color;
+}
+
+// Title H3
+@mixin titleH3($color) {
+  @include font(14px, $font-family, 16px);
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin titleH4($color) {
+  @include font(12px, $font-family, 14px);
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin largeString($color) {
+  @include font(18px, $font-family, 21px);
   font-weight: 400;
   color: $color;
 }
 
-@mixin button($fontSize) {
+@mixin normalString($color) {
+  @include font(14px, $font-family, 16px);
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin smallString($color) {
+  @include font(12px, $font-family, 14px);
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin button($fontSize, $color, $bg-color) {
   display: inline-block;
-  height: 40px;
-  padding: 0 32px;
+  height: 60px;
+  padding: 0 10px;
 
   @include font($fontSize, $font-family, $fontSize);
-  font-weight: 400;
+  font-weight: 600;
   white-space: nowrap;
-  color: #000000;
+  color: $color;
   text-decoration: none;
   text-align: center;
   border: 0;
@@ -33,71 +65,22 @@
   outline: none;
   cursor: pointer;
   appearance: none;
-  background: transparent;
+  background-color: $bg-color;
 
   transition: background-color $transition-time ease;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    background: rgba(#000000, 0.4);
+    background: rgba($bg-color, 0.9);
   }
 
   &:active {
-    background: rgba(#000000, 0.4);
+    background: rgba($bg-color, 0.9);
   }
 
   &:disabled {
-    background-color: $n-color-light;
+    background-color: $border-color;
     pointer-events: none;
-  }
-}
-
-@mixin input($fontSize, $color, $placeholderColor) {
-  width: 100%;
-  height: 40px;
-  padding: 0 16px;
-  border: 0;
-  outline: none;
-  appearance: none;
-  border-radius: $border-radius;
-
-  @include font($fontSize, $font-family, $fontSize);
-  font-weight: 400;
-  line-height: 40px;
-  color: $color;
-  overflow: hidden;
-  white-space: nowrap;
-
-  &::-webkit-input-placeholder {
-    color: $placeholderColor;
-  }
-
-  &::-moz-placeholder {
-    color: $placeholderColor;
-  }
-
-  &:-moz-placeholder {
-    color: $placeholderColor;
-  }
-
-  &:-ms-input-placeholder {
-    color: $placeholderColor;
-  }
-
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-moz-placeholder {
-    color: transparent;
-  }
-
-  &:focus:-moz-placeholder {
-    color: transparent;
-  }
-
-  &:focus:-ms-input-placeholder {
-    color: transparent;
   }
 }
