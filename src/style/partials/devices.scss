@@ -1,0 +1,40 @@
+.main-section {
+  position: relative;
+
+  height: 330px;
+  margin-right: 26px;
+  background-color: rgba(77, 94, 247, 0.55);
+}
+
+
+.devices-swiper {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+
+  background-color: rgba(230, 72, 83, 0.64);
+
+
+  &__inner {
+    transform: translateX(0);
+    transition: transform 1s;
+  }
+}
+
+.devices-swiper__arrows-next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  margin-left: 45px;
+  z-index: 1;
+}
+
+.devices-swiper__arrows-prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  background-color: green;
+  z-index: 1;
+}
