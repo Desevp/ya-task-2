@@ -1,9 +1,10 @@
-
 @import '../../node_modules/normalize.css/normalize.css';
-@import './src/style/fonts.scss';
-@import './src/style/variables.scss';
-@import './src/style/mixins.scss';
-@import './src/style/functions.scss';
-@import './src/style/print.scss';
+@import './src/style/fonts';
+@import './src/style/variables';
+@import './src/style/mixins';
+@import './src/style/functions';
+@import './src/style/print';
 
-@import './src/style/partials/layout.scss';
+@import './src/style/partials/page';
+@import './src/style/partials/header';
+@import './src/style/partials/footer';

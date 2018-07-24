@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="no-js  page" lang="ru">
+<html class="no-js page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Яндекс Дом</title>
     <meta name="description" content="">
     @@include('_include/page_head.html')
   </head>
-  <body class="layout">
-    <div class="layout__inner">
-      <div class="layout__content">
-        <main role="main">
+  <body>
+    <div class="page__inner">
+      <div class="page__content">
+        @@include('_include/header.html')
+        <main role="main" class="container">
+
           <h1 class="test">Привет, Геннадий!</h1>
           <div class="test-image">
 
           </div>
         </main>
       </div>
-      <div class="layout__footer">
-
+      <div class="page__footer">
+        @@include('_include/footer.html')
       </div>
     </div>
     @@include('_include/page_bottom.html')
