@@ -43,7 +43,9 @@ body {
 .container {
   position: relative;
   width: 100%;
+  max-width: 1440px;
   height: 100%;
+  margin: 0 auto;
   padding: 0 40px;
 
   @media (max-width: $tablet) {
@@ -57,24 +59,17 @@ body {
 
 .top-section {
   display: flex;
-
-
-
-
-
-
 }
 
 .section {
   position: relative;
 
-
   &__title {
-
+    @include titleH2($text-color);
   }
 
   &--left {
     flex-grow: 1;
+    margin-right: 26px;
   }
-
 }

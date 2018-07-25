@@ -1,0 +1,85 @@
+.main-block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 330px;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 20px;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background-image: url('/images/bg@1x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/images/bg@2x.png');
+  }
+
+  &__info {
+    margin-right: 20px;
+  }
+
+  &__planned {
+    flex-shrink: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(58, 155, 164, 0.62);
+  }
+
+  &__title {
+    margin: 8px 0 0;
+    @include font(27px, $font-family, 31px);
+    color: $text-color;
+  }
+
+  &__description {
+    position: relative;
+    margin-top: 4px;
+    @include normalString($text-color);
+  }
+
+  &__weather {
+    margin-top: 25px;
+  }
+}
+
+.weather {
+  position: relative;
+
+  &__item {
+    display: inline-block;
+    margin-right: 18px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    @include normalString($text-color--light);
+  }
+
+  &__temperature {
+    display: inline-block;
+    margin-top: 4px;
+    @include font(36px, $font-family, 42px);
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__picture {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-left: 5px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

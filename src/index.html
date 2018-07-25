@@ -4,90 +4,94 @@
     <meta charset="utf-8">
     <title>Яндекс Дом</title>
     <meta name="description" content="">
-    @@include('_include/page_head.html')
+    @@include('_include/page-head.html')
   </head>
   <body>
     <div class="page__inner">
       <div class="page__content">
         @@include('_include/header.html')
-        <main role="main" class="container">
-          <div class="top-section">
-            <section class="section section--left">
-              <h2 class="section__title">Главное</h2>
-
-              <div class="main-section">
-
-              </div>
-
-            </section>
-            <section class="section scripts-section">
-              <h2 class="section__title">Избранные сценарии</h2>
-              <div class="next">
-
-              </div>
-              <div class="prev">
-
-              </div>
-              <div class="test-slider">
-                <div class="test">
-                  <div class="test__page">
-                    <div class="test__item">
-                      1
+        <main role="main">
+          <div class="container">
+            <div class="top-section">
+              <section class="section section--left">
+                <h2 class="section__title">Главное</h2>
+                @@include('_include/main-block.html')
+              </section>
+              <section class="section scripts-section">
+                <div class="section__title-wr">
+                  <h2 class="section__title">Избранные сценарии</h2>
+                  <div class="">
+                    <div class="next">
 
                     </div>
-                    <div class="test__item">
-                      2
+                    <div class="prev">
 
                     </div>
-                    <div class="test__item">
-                      3
-
-                    </div>
-
-                    <div class="test__item">
-                      4
-
-                    </div>
-                    <div class="test__item">
-                      5
-
-                    </div>
-                    <div class="test__item">
-                      6
-
-                    </div>
-                    <div class="test__item">
-                      7
-
-                    </div>
-
-                    <div class="test__item">
-                      8
-
-                    </div>
-
-                    <div class="test__item">
-                      9
-
-                    </div>
-
-                  </div>
-                  <div class="test__page">
-                    <div class="test__item">
-                      10
-
-
-                    </div>
-
                   </div>
                 </div>
 
+                <div class="devise-block">
+                  <div class="test">
+                    <div class="test__page">
+                      <div class="test__item">
+                        1
+
+                      </div>
+                      <div class="test__item">
+                        2
+
+                      </div>
+                      <div class="test__item">
+                        3
+
+                      </div>
+
+                      <div class="test__item">
+                        4
+
+                      </div>
+                      <div class="test__item">
+                        5
+
+                      </div>
+                      <div class="test__item">
+                        6
+
+                      </div>
+                      <div class="test__item">
+                        7
+
+                      </div>
+
+                      <div class="test__item">
+                        8
+
+                      </div>
+
+                      <div class="test__item">
+                        9
+
+                      </div>
+
+                    </div>
+                    <div class="test__page">
+                      <div class="test__item">
+                        10
 
 
-              </div>
+                      </div>
 
-            </section>
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+              </section>
+            </div>
           </div>
+
           <section class="section devices-section">
             <h2 class="section__title">Избранные устройства</h2>
             <div class="devices-swiper__arrows-prev">
@@ -157,6 +161,6 @@
         @@include('_include/footer.html')
       </div>
     </div>
-    @@include('_include/page_bottom.html')
+    @@include('_include/page-bottom.html')
   </body>
 </html>
