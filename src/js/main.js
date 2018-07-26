@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
     nextBtn: '.js-script-slider-next',
     btnDisablesClass: 'slider-arrows__btn--is-disabled'
   });
+
+  let deviceSlider = new SimpleSlider('.js-device-slider', {
+    wrapper: '.slider__inner',
+    item: '.slider__item',
+    margin: 15,
+    prevBtn: '.js-device-slider-prev',
+    nextBtn: '.js-device-slider-next',
+    btnDisablesClass: 'slider-arrows__btn--is-disabled'
+  });
 });
 
 window.onload = function() {
