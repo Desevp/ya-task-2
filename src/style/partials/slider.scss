@@ -1,13 +1,36 @@
 .script-slider {
-  position: relative;
-  display: flex;
-  max-width: 100%;
-  height: 330px;
-  overflow: auto;
+  width: 100%;
 
   @media (max-width: $tablet) {
-    height: 100px;
+    width: calc(100% + 30px);
+    max-width: calc(100% + 30px);
   }
+
+  @media (max-width: $mobile) {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+  }
+}
+
+.device-slider {
+  width: calc(100% + 40px);
+  // max-width: calc(100% + 40px);
+
+  @media (max-width: $tablet) {
+    width: calc(100% + 30px);
+    max-width: calc(100% + 30px);
+  }
+
+  @media (max-width: $mobile) {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+  }
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  overflow: auto;
 
   &__inner {
     display: flex;
@@ -26,9 +49,6 @@
     @media (max-width: $tablet) {
       flex-wrap: nowrap;
       flex-shrink: unset;
-    }
-
-    &:last-child {
       margin-right: 0;
     }
   }
@@ -36,6 +56,11 @@
   &__item {
     position: relative;
     margin-right: 15px;
+  }
+}
+
+.slider--page {
+  .slider__item {
     margin-top: 15px;
 
     @media (max-width: $tablet) {
@@ -52,13 +77,6 @@
 
     &:nth-child(-n + 3) {
       margin-top: 0;
-    }
-
-    &:last-child {
-
-      @media (max-width: $tablet) {
-        margin-right: 0;
-      }
     }
   }
 }

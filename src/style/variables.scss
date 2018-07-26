@@ -2,13 +2,14 @@
 
 $black:                       #000000;
 $white:                       #ffffff;
+$grey:                        #333333;
 
 $theme-color:                  #ffd93e;
 
 // Семантические цвета
 
 $text-color-dark:             $black;
-$text-color:                  #333333;
+$text-color:                  $grey;
 $text-color--light:           #858585;
 $body-bg:                     #ffffff;
 $block-bg:                    #f7f7f7;

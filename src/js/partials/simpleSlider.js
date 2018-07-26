@@ -4,17 +4,23 @@ class SimpleSlider {
     this.initialized = false;
 
     this.options  = Object.assign({
-      wrapper: '.devices-swiper__inner',
-      item: '.test2__item',
+      wrapper: '.wrapper',
+      item: '.item',
       marginItem: 15,
-      prevBtn: '.devices-swiper__arrows-prev',
-      nextBtn: '.devices-swiper__arrows-next',
-      btnDisablesClass: 'slider-arrows__btn--is-disabled'
+      prevBtn: '.btn-prev',
+      nextBtn: '.btn-next',
+      btnDisablesClass: 'is-disabled'
     }, options);
 
-    if (!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-      this.init();
+    // if (!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+    //   this.init();
+    // }
+    this.init();
+
+    if ((document.body.clientWidth <= 1024) && (this.initialized)) {
+      this.disable();
     }
+
 
     window.addEventListener('resize', () => {
       if ((document.body.clientWidth > 1024) && !(this.initialized)) {
@@ -66,6 +72,8 @@ class SimpleSlider {
   }
 
   move(direction) {
+    let curItemWidth = this.item.offsetWidth;
+
     let _getTranslateX = (myElement) =>{
       let style = window.getComputedStyle(myElement);
       let matrix = new WebKitCSSMatrix(style.webkitTransform);
@@ -73,12 +81,12 @@ class SimpleSlider {
     }
 
     let _getCountItemOffset = () => {
-      return Math.floor(this.slider.offsetWidth/this.item.offsetWidth);
+      return Math.floor(this.slider.offsetWidth/curItemWidth);
     }
 
     let curTranslate = _getTranslateX(this.wrapper);
 
-    let offset = _getCountItemOffset() * (this.item.offsetWidth + this.marginItem);
+    let offset = _getCountItemOffset() * (curItemWidth + this.marginItem);
 
     let newVal;
 
@@ -105,7 +113,7 @@ class SimpleSlider {
         this.prevBtn.classList. remove(this.options.btnDisablesClass);
       }
 
-      if (Math.abs(newVal - offset) > this.wrapper.scrollWidth) {
+      if (Math.abs(newVal - offset) >= this.wrapper.scrollWidth) {
         this.nextBtn.classList. add(this.options.btnDisablesClass);
       }
     }

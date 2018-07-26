@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
   @@include('partials/SimpleSlider.js')
 
   let scriptSlider = new SimpleSlider('.js-script-slider', {
-    wrapper: '.script-slider__inner',
-    item: '.script-slider__item',
+    wrapper: '.slider__inner',
+    item: '.slider__item',
+    margin: 15,
     prevBtn: '.js-script-slider-prev',
-    nextBtn: '.js-script-slider-next'
+    nextBtn: '.js-script-slider-next',
+    btnDisablesClass: 'slider-arrows__btn--is-disabled'
   });
 });
 
