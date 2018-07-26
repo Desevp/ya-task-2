@@ -29,15 +29,44 @@
               </section>
             </div>
           </div>
-
           <section class="section devices-section">
             <div class="container">
               <div class="section__title-wr">
                 <h2 class="section__title">Избранные устройства</h2>
-                <div class="slider-arrows">
-                  <div class="slider-arrows__btn slider-arrows__btn--prev js-device-slider-prev"></div>
-                  <div class="slider-arrows__btn slider-arrows__btn--next js-device-slider-next"></div>
+                <div class="section__panel">
+                  <div class="devices-section__filters filters">
+                    <div class="filters__item filters__item--is-active" data-value="All">
+                      Все
+                    </div>
+                    <div class="filters__item" data-value="kitchen">
+                      Кухня
+                    </div>
+                    <div class="filters__item" data-value="hall">
+                      Зал
+                    </div>
+                    <div class="filters__item" data-value="bulb">
+                      Лампочки
+                    </div>
+                    <div class="filters__item" data-value="cameras">
+                      Камеры
+                    </div>
+                  </div>
+                  <div class="filters-mobile">
+                    <select class="filters-mobile__select">
+                      <option class="filters-mobile__item" data-value="All" selected="selected">Все</option>
+                      <option class="filters-mobile__item" data-value="kitchen">Кухня</option>
+                      <option class="filters-mobile__item" data-value="hall">Зал</option>
+                      <option class="filters-mobile__item" data-value="bulb">Лампочки</option>
+                      <option class="filters-mobile__item" data-value="cameras">Камеры</option>
+                    </select>
+                  </div>
+                  <div class="slider-arrows devices-section__arrows">
+                    <div class="slider-arrows__btn slider-arrows__btn--prev js-device-slider-prev"></div>
+                    <div class="slider-arrows__btn slider-arrows__btn--next js-device-slider-next"></div>
+                  </div>
                 </div>
+
+
               </div>
               @@include('_include/device-block.html')
             </div>

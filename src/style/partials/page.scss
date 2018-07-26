@@ -96,11 +96,39 @@ body {
 
   &__title-wr {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__title {
+    display: inline-block;
     @include titleH2($text-color);
+  }
+
+  &__panel {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $fablet) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.devices-section {
+  position: relative;
+
+  &__filters {
+    margin-left: 13px;
+
+    @media (max-width: $fablet) {
+      display: none;
+    }
+  }
+
+  &__arrows {
+    margin-left: 13px;
   }
 }

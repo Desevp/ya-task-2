@@ -13,6 +13,7 @@ $text-color:                  $grey;
 $text-color--light:           #858585;
 $body-bg:                     #ffffff;
 $block-bg:                    #f7f7f7;
+$block-bg-hover:              #b8aeae;
 
 $border-color:                #f0f0f0;
 
@@ -29,7 +30,7 @@ $font-family--headings:       $font-family;
 // Ширины
 
 $mobile:               480px;
-$fablet:               580px;
+$fablet:               767px;
 $tablet:               1023px;
 $desktop:              1280px;
 $wide-desktop:         1920px;
@@ -40,6 +41,7 @@ $wide-desktop:         1920px;
 $border-radius:               20px;
 $opacity:                     0.6;
 $transition-time:             0.2s;
-$shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
+$shadow-off:                   0 2px 6px 0 rgba(197, 186, 186, 0);
+$shadow:                      0 2px 6px 0 rgba(197, 186, 186, 0.5);
 
 $z-index-modal:               100;
