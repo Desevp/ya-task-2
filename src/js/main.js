@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wrapper: '.slider__inner',
     item: '.slider__item',
     margin: 15,
-    prevBtn: '.js-script-slider-prev',
-    nextBtn: '.js-script-slider-next',
+    btnWrapper: '.js-script-slider-btns',
     btnDisablesClass: 'slider-arrows__btn--is-disabled'
   });
 
@@ -15,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wrapper: '.slider__inner',
     item: '.slider__item',
     margin: 15,
-    prevBtn: '.js-device-slider-prev',
-    nextBtn: '.js-device-slider-next',
+    btnWrapper: '.js-device-slider-btns',
     btnDisablesClass: 'slider-arrows__btn--is-disabled'
   });
 });

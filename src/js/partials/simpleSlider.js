@@ -7,8 +7,9 @@ class SimpleSlider {
       wrapper: '.wrapper',
       item: '.item',
       marginItem: 15,
-      prevBtn: '.btn-prev',
-      nextBtn: '.btn-next',
+      btnWrapper: '.slider-arrows',
+      prevBtn: '.slider-arrows__btn--prev',
+      nextBtn: '.slider-arrows__btn--next',
       btnDisablesClass: 'is-disabled'
     }, options);
 
@@ -23,6 +24,9 @@ class SimpleSlider {
 
 
     window.addEventListener('resize', () => {
+
+    this._checkArrows() ;
+
       if ((document.body.clientWidth > 1024) && !(this.initialized)) {
         this.init();
         this.wrapper.style.transform = 'translateX(0px)';
@@ -39,8 +43,9 @@ class SimpleSlider {
     this.initialized = true;
     this.wrapper = this.slider.querySelector(this.options.wrapper);
     this.item = this.slider.querySelector(this.options.item);
-    this.prevBtn = document.querySelector(this.options.prevBtn);
-    this.nextBtn = document.querySelector(this.options.nextBtn);
+    this.btnWrapper = document.querySelector(this.options.btnWrapper);
+    this.prevBtn = this.btnWrapper.querySelector(this.options.prevBtn);
+    this.nextBtn = this.btnWrapper.querySelector(this.options.nextBtn);
 
     this.marginItem = this.options.marginItem;
 
@@ -59,11 +64,38 @@ class SimpleSlider {
         this.move('prev');
       }
     }
+
+    this._checkArrows() ;
   }
 
   _setDefaultArrow() {
       this.prevBtn.classList.add(this.options.btnDisablesClass);
       this.nextBtn.classList. remove(this.options.btnDisablesClass);
+  }
+
+  _checkArrows() {
+    let wrapperScrollWidth = this.wrapper.scrollWidth - this.marginItem;
+
+    if (this.slider.offsetWidth < wrapperScrollWidth) {
+      this._showArrow();
+    }
+    else {
+      this._hiddenArrow();
+    }
+  }
+
+  _showArrow() {
+    let hiddenArrow = this.btnWrapper.classList.contains('slider-arrows--is-hidden');
+    if (hiddenArrow) {
+      this.btnWrapper.classList.remove('slider-arrows--is-hidden');
+    }
+  }
+
+  _hiddenArrow() {
+    let hiddenArrow = this.btnWrapper.classList.contains('slider-arrows--is-hidden');
+    if (!hiddenArrow) {
+      this.btnWrapper.classList.add('slider-arrows--is-hidden');
+    }
   }
 
   disable() {
@@ -72,7 +104,10 @@ class SimpleSlider {
   }
 
   move(direction) {
-    let curItemWidth = this.item.offsetWidth;
+
+    let _getCountItemOffset = () => {
+      return Math.floor(this.slider.offsetWidth/this.item.offsetWidth);
+    }
 
     let _getTranslateX = (myElement) =>{
       let style = window.getComputedStyle(myElement);
@@ -80,13 +115,9 @@ class SimpleSlider {
       return matrix.m41;
     }
 
-    let _getCountItemOffset = () => {
-      return Math.floor(this.slider.offsetWidth/curItemWidth);
-    }
-
     let curTranslate = _getTranslateX(this.wrapper);
 
-    let offset = _getCountItemOffset() * (curItemWidth + this.marginItem);
+    let offset = _getCountItemOffset() * (this.item.offsetWidth + this.marginItem);
 
     let newVal;
 
