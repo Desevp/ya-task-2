@@ -3,9 +3,6 @@
   display: flex;
   justify-content: space-between;
   height: 330px;
-  padding-top: 20px;
-  padding-left: 25px;
-  padding-right: 20px;
   border-radius: $border-radius;
   overflow: hidden;
   background-image: url('/images/bg@1x.png');
@@ -17,14 +14,23 @@
     background-image: url('/images/bg@2x.png');
   }
 
+  @media (max-width: $fablet) {
+    flex-direction: column;
+    height: auto;
+  }
+
   &__info {
-    margin-right: 20px;
+    padding: 20px;
   }
 
   &__planned {
     flex-shrink: 0;
     height: 100%;
-    background-color: rgba(58, 155, 164, 0.62);
+    margin-right: 20px;
+
+    @media (max-width: $fablet) {
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -80,5 +86,74 @@
       width: 100%;
       height: auto;
     }
+  }
+}
+
+.planned-slider {
+  position: relative;
+  width: 200px;
+  height: 100%;
+  overflow: hidden;
+
+  @media (max-width: $desktop) {
+    width: 170px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 200px;
+  }
+
+  @media (max-width: $fablet) {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.planned-slider__inner {
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: inherit;
+
+  @media (max-width: $fablet) {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.planned-slider__content {
+  width: 100%;
+  padding: 20px 0;
+
+  @media (max-width: $fablet) {
+    position: relative;
+    display: inline-flex;
+    width: inherit;
+    padding: 0 20px;
+  }
+}
+
+.planned-slider__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.planned-slider__item {
+  margin-bottom: 15px;
+  flex-shrink: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @media (max-width: $fablet) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $fablet) {
+    margin-right: 20px;
+    margin-bottom: 0;
   }
 }
