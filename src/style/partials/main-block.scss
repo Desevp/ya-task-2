@@ -26,7 +26,7 @@
   &__planned {
     flex-shrink: 0;
     height: 100%;
-    margin-right: 20px;
+    margin-right: 10px;
 
     @media (max-width: $fablet) {
       margin-right: 0;
@@ -91,17 +91,9 @@
 
 .planned-slider {
   position: relative;
-  width: 200px;
+  width: 220px;
   height: 100%;
   overflow: hidden;
-
-  @media (max-width: $desktop) {
-    width: 170px;
-  }
-
-  @media (max-width: $tablet) {
-    width: 200px;
-  }
 
   @media (max-width: $fablet) {
     width: 100%;
@@ -126,13 +118,13 @@
 
 .planned-slider__content {
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 10px;
 
   @media (max-width: $fablet) {
     position: relative;
     display: inline-flex;
     width: inherit;
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 }
 

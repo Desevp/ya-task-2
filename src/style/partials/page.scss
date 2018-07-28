@@ -60,7 +60,7 @@ body {
 .top-section {
   display: flex;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     display: block;
   }
 
@@ -70,7 +70,7 @@ body {
     width: calc(100% - 630px - 26px);
 
     @media (max-width: $desktop) {
-      width: calc(100% - 510px - 30px - 26px);
+      width: 100%;
     }
 
     @media (max-width: $tablet) {
@@ -80,9 +80,10 @@ body {
 
   &__right {
     width: 630px;
+    flex-shrink: 0;
 
     @media (max-width: $desktop) {
-      width: 510px + 30px;
+      width:100%;
     }
 
     @media (max-width: $tablet) {
