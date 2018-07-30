@@ -1,0 +1,72 @@
+.tuning-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 200px;
+  height: 120px;
+  padding: 14px;
+  border-radius: $border-radius;
+  background-color: $block-bg;
+  box-shadow: $shadow-off;
+  cursor: pointer;
+  transition: box-shadow $transition-time;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
+  &--less-height {
+    height: 100px;
+  }
+
+  &__icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__title {
+    @include titleH3($text-color);
+  }
+
+  &__description {
+    position: relative;
+    margin-top: 4px;
+    @include smallString($text-color--light);
+  }
+}
+
+
+.status-icon {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: background $transition-time;
+
+  &__sun {
+    background-image: url('/images/icon_sun_2@1x.png');
+    background-image: url('/images/icon_sun_2.svg');
+  }
+
+  &__sun-off {
+    background-image: url('/images/icon_sun@1x.png');
+    background-image: url('/images/icon_sun.svg');
+  }
+
+  &__temperature {
+    background-image: url('/images/icon_temperature_2@1x.png');
+    background-image: url('/images/icon_temperature_2.svg');
+  }
+
+  &__temperature-off {
+    background-image: url('/images/icon_temperature@1x.png');
+    background-image: url('/images/icon_temperature.svg');
+  }
+
+  &__scheduled {
+    background-image: url('/images/icon_scheduled@1x.png');
+    background-image: url('/images/icon_scheduled.svg');
+  }
+}
