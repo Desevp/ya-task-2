@@ -45,27 +45,27 @@
   background-size: cover;
   transition: background $transition-time;
 
-  &__sun {
+  &--sun {
     background-image: url('/images/icon_sun_2@1x.png');
     background-image: url('/images/icon_sun_2.svg');
   }
 
-  &__sun-off {
+  &--sun-off {
     background-image: url('/images/icon_sun@1x.png');
     background-image: url('/images/icon_sun.svg');
   }
 
-  &__temperature {
+  &--temperature {
     background-image: url('/images/icon_temperature_2@1x.png');
     background-image: url('/images/icon_temperature_2.svg');
   }
 
-  &__temperature-off {
+  &--temperature-off {
     background-image: url('/images/icon_temperature@1x.png');
     background-image: url('/images/icon_temperature.svg');
   }
 
-  &__scheduled {
+  &--scheduled {
     background-image: url('/images/icon_scheduled@1x.png');
     background-image: url('/images/icon_scheduled.svg');
   }

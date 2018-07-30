@@ -1,0 +1,110 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 670px;
+  width: 100%;
+  padding: 20px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: $z-index-modal;
+
+  &__main {
+    position: relative;
+    padding: 25px;
+    border-radius: $border-radius;
+    background-color: $body-bg;
+    overflow: hidden;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__other {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $fablet) {
+      display: none;
+    }
+  }
+
+  &__current-value {
+    margin-right: 5px;
+    @include font(36px, $font-family, 42px);
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  &__title {
+    margin: 0;
+    @include font(27px, $font-family, 31px);
+    font-weight: 600;
+    color: $text-color;
+
+    @media (max-width: $mobile) {
+      @include titleH2($text-color);
+    }
+  }
+
+  &__description {
+    @include normalString($text-color);
+  }
+
+  &__content {
+    margin-top: 20px;
+  }
+
+  .popup__buttons-wr {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .popup__button {
+    margin-right: 16px;
+
+    @media (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .popup__apply {
+    @include button(18px, $text-color-dark, $theme-color);
+  }
+
+  .popup__close {
+    @include button(18px, $text-color, $body-bg);
+  }
+}
+
+.overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($grey, 0.5);
+  z-index: $z-index-modal - 1;
+}
