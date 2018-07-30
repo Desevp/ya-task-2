@@ -12,6 +12,7 @@
     width: 100%;
     height: 64px;
     justify-content: space-between;
+    border-bottom: none;
   }
 
   &__inner {
@@ -32,7 +33,7 @@
       display: block;
       position: relative;
       width: 100%;
-      height: 92px;
+      height: 64px;
       z-index: -1;
     }
   }

@@ -76,6 +76,12 @@ body {
     @media (max-width: $tablet) {
       width: 100%;
     }
+
+    .section__title {
+      @media (max-width: $fablet) {
+        display: none;
+      }
+    }
   }
 
   &__right {
@@ -94,6 +100,7 @@ body {
 
 .section {
   position: relative;
+  margin-top: 30px;
 
   &__title-wr {
     display: flex;
@@ -103,7 +110,12 @@ body {
 
   &__title {
     display: inline-block;
+    margin: 0;
     @include titleH2($text-color);
+  }
+
+  &__inner {
+    margin-top: 20px;
   }
 
   &__panel {
