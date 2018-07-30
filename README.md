@@ -4,7 +4,7 @@ npm start Запустить сборку, сервер и слежение за
 npm start ЗАДАЧА Запустить задачу с названием ЗАДАЧА список задач в gulpfile.js
 npm run build Сборка проекта без карт кода (сжатый вид, как результат работы)
 npm run lint:scss Проверка стилей проекта https://stylelint.io/
-npm run lint:scss Проверка js https://eslint.org/
+npm run lint:js Проверка js https://eslint.org/
 
 ## Назначение папок
   build/            # Папка сборки

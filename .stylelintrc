@@ -251,7 +251,8 @@
     "at-rule-empty-line-before": ["always", {
       "message": "Перед @-правилами строку пустую оставь (кроме @import и @include)",
       ignoreAtRules: ["import", "include", "function", "return", "if", "else"],
-      ignore: ["after-comment"]
+      ignore: ["after-comment", "first-nested"],
+
     }],
     "at-rule-name-case": ["lower", {
       "message": "@-правила буквами строчными набирать следует"
