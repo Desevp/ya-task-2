@@ -62,7 +62,7 @@
     margin-top: 20px;
   }
 
-  .popup__buttons-wr {
+  &__buttons-wr {
     margin-top: 20px;
     position: relative;
     display: flex;
@@ -73,7 +73,7 @@
     }
   }
 
-  .popup__button {
+  &__button {
     margin-right: 16px;
 
     @media (max-width: $mobile) {
@@ -90,12 +90,18 @@
     }
   }
 
-  .popup__apply {
+  &__apply {
     @include button(18px, $text-color-dark, $theme-color);
   }
 
-  .popup__close {
+  &__close {
     @include button(18px, $text-color, $body-bg);
+  }
+
+  &__filters {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
   }
 }
 
