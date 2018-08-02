@@ -1,4 +1,4 @@
-<div class="popup">
+<!-- <div class="popup">
   <div class="popup__main">
     <div class="popup__top">
       <h2 class="popup__title">
@@ -29,6 +29,63 @@
         <div class="filters__item" data-value="kitchen">
           Жарко
         </div>
+      </div>
+      <div class="popup__range range__wr">
+        <div class="range__caption range__caption--text range__caption--left">
+          -10
+        </div>
+        <div class="range__caption range__caption--text range__caption--right">
+          +30
+        </div>
+        <input class="range range--temperature" type="range" min="-10" max="30" step="1" value="17">
+      </div>
+    </div>
+  </div>
+  <div class="popup__buttons-wr">
+    <button class="popup__button popup__apply" type="button" name="apply">Применить</button>
+    <button class="popup__button popup__close" type="button" name="close">Закрыть</button>
+  </div>
+</div> -->
+<div class="popup">
+  <div class="popup__main">
+    <div class="popup__top">
+      <h2 class="popup__title">
+        Xiaomi Yeelight LED Smart Bulb
+      </h2>
+      <div class="popup__other">
+        <div class="popup__icon status-icon status-icon--sun">
+        </div>
+      </div>
+    </div>
+    <div class="popup__description">
+      Включится в&nbsp;17:00
+    </div>
+    <div class="popup__content">
+      <div class="filters popup__filters">
+        <div class="filters__item filters__item--is-active" data-value="All">
+          Вручную
+        </div>
+        <div class="filters__item" data-value="day">
+          Дневной свет
+        </div>
+        <div class="filters__item" data-value="night">
+          Вечерний свет
+        </div>
+      </div>
+      <div class="popup__range range__wr">
+        <div class="range__caption range__caption--icon range__caption--left">
+          <picture>
+              <source type="image/svg+xml" srcset="/images/icon_sun_min.svg">
+              <img src="/images/icon_sun_min.png" srcset="/images/icon_sun_min@2x.png 2x" alt="min">
+          </picture>
+        </div>
+        <div class="range__caption range__caption--icon range__caption--right">
+          <picture>
+              <source type="image/svg+xml" srcset="/images/icon_sun_max.svg">
+              <img src="/images/icon_sun_max.png" srcset="/images/icon_sun_max@2x.png 2x" alt="max">
+          </picture>
+        </div>
+        <input class="range range--lighting" type="range" min="0" max="10">
       </div>
     </div>
   </div>

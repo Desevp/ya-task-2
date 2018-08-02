@@ -1,0 +1,167 @@
+.range__wr {
+  position: relative;
+
+  @media (max-width: $mobile) {
+    height: 266px;
+  }
+}
+
+.range__caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+
+  @media (max-width: $mobile) {
+    top: unset;
+    right: inherit;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &--text {
+    @include largeString($white);
+  }
+
+  &--icon {
+    width: 30px;
+    height: 30px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &--left {
+    left: 20px;
+
+    @media (max-width: $mobile) {
+      bottom: 20px;
+    }
+  }
+
+  &--right {
+    right: 20px;
+
+    @media (max-width: $mobile) {
+      top: 20px;
+    }
+  }
+}
+
+@mixin rangeTrack {
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+}
+
+@mixin rangeThumb {
+  position: relative;
+  box-sizing: content-box;
+  width: 60px;
+  height: 60px;
+  margin-top: -4px;
+  border: 4px solid $white;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: radial-gradient(at 50% 50%, transparent 27px, rgba(#333333, 0.1) 0);
+  cursor: pointer;
+  appearance: none;
+}
+
+.range {
+  appearance: none;
+  width: 100%;
+  height: 60px;
+
+  @media (max-width: $mobile) {
+    transform: rotate(-90deg);
+    transform-origin: left;
+    width: 266px;
+    position: absolute;
+    top: 236px;
+    left: 50%;
+    margin-left: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include rangeTrack;
+  }
+
+  &::-webkit-slider-thumb {
+    position: relative;
+    box-sizing: content-box;
+    width: 60px;
+    height: 60px;
+    margin-top: -4px;
+    border: 4px solid $white;
+    border-radius: 50%;
+    background-color: transparent;
+    background-image: radial-gradient(at 50% 50%, transparent 27px, rgba(#333333, 0.1) 0);
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &::-moz-range-track {
+    @include rangeTrack;
+  }
+
+  &::-moz-range-thumb {
+    @include rangeThumb;
+  }
+
+  &::-moz-focus-outer {
+    border: none;
+  }
+
+  &::-ms-track {
+    @include rangeTrack;
+  }
+
+  &::-ms-fill-lower,
+  &::-ms-fill-upper {
+    background: transparent;
+    border: none;
+  }
+
+  &::-ms-thumb {
+    @include rangeThumb;
+    margin-top: 0;
+  }
+}
+
+.range--temperature {
+  &::-webkit-slider-runnable-track {
+    background-image: linear-gradient(90deg, #068fff 2%, #ffd800 51%, #f76b1c 100%);
+  }
+
+  &::-moz-range-track {
+    background-image: linear-gradient(90deg, #068fff 2%, #ffd800 51%, #f76b1c 100%);
+  }
+
+  &::-ms-track {
+    background-image: linear-gradient(90deg, #068fff 2%, #ffd800 51%, #f76b1c 100%);
+  }
+}
+
+.range--lighting {
+  &::-webkit-slider-runnable-track {
+    background-image: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
+  }
+
+  &::-moz-range-track {
+    background-image: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
+  }
+
+  &::-ms-track {
+    background-image: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
+  }
+}

@@ -3,6 +3,8 @@
   top: 50%;
   left: 50%;
   max-width: 670px;
+  max-height: 100vh;
+  overflow: auto;
   width: 100%;
   padding: 20px;
   transform: translateX(-50%) translateY(-50%);
@@ -26,7 +28,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $fablet) {
+    @media (max-width: $mobile) {
       display: none;
     }
   }
@@ -101,7 +103,12 @@
   &__filters {
     flex-wrap: nowrap;
     max-width: 100%;
+    padding: 5px 0;
     overflow-x: auto;
+  }
+
+  &__range {
+    margin-top: 20px;
   }
 }
 
