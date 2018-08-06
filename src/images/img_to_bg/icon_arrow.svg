@@ -1,0 +1,10 @@
+
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_arrow" transform="translate(4.000000, 6.000000) rotate(-90.000000) translate(-4.000000, -6.000000) translate(-2.000000, 2.000000)" fill="#333333" fill-rule="nonzero">
+            <path d="M0.311431,5.943579 L5.036156,0.590855 C5.371306,0.211158 5.527735,0.113005 5.715788,0.048431 C5.903841,-0.016144 6.096159,-0.016144 6.284212,0.048431 C6.472265,0.113005 6.628694,0.211158 6.963844,0.590855 L11.688569,5.943579 C12.10381,6.414014 12.10381,7.176739 11.688569,7.647174 C11.489162,7.873085 11.21871,8 10.936707,8 L1.063293,8 C0.476053,8 0,7.460672 0,6.795376 C0,6.47589 0.112025,6.169489 0.311431,5.943579 Z" id="Rectangle-5-Copy"></path>
+        </g>
+    </g>
+</svg>

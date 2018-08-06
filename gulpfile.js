@@ -43,7 +43,7 @@ var path = {
 	},
 	src: {
 		html: 'src/*.html',
-		js: 'src/js/main.js',
+		js: 'src/js/common.js',
     vendor: 'src/js/vendors.js',
 		style: 'src/style/style.scss',
 		images: 'src/images/',
