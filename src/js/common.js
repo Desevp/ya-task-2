@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   @@include('partials/SimpleSlider.js')
   @@include('partials/CircularSlider.js')
+  @@include('partials/RangeFilters.js')
+  @@include('partials/Modal.js')
 
   @@include('partials/main.js')
 });

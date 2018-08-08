@@ -379,9 +379,6 @@ gulp.task('serve', ['build'], function() {
   // Слежение за vendor js
   gulp.watch([path.watch.vendor], ['copy:js']);
 
-  // Слежение за vendor js
-  gulp.watch([path.watch.vendor], ['sprite:svg']);
-
   // Слежение за изображениями
   gulp.watch([path.src.images + '*.{jpg,jpeg,gif,png,svg}', '!' + path.src.svg], ['build:images', 'opt:images']);
 

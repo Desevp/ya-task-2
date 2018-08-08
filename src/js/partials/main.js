@@ -1,4 +1,5 @@
-
+(function() {
+  // Подключение слайдеров
   let scriptSlider = new SimpleSlider('.js-script-slider', {
     wrapper: '.slider__inner',
     item: '.slider__item',
@@ -15,7 +16,7 @@
     btnDisablesClass: 'slider-arrows__btn--is-disabled'
   });
 
-
+  // Подключение крутилки
   let roundSliderEl = document.querySelector('.js-round-slider');
 
   if (roundSliderEl) {
@@ -36,14 +37,58 @@
     }
   }
 
+  // Подключение фильтров в попапах
+  let temperatureFilters = document.querySelector('.js-filters-temperature');
+
+  if (temperatureFilters) {
+    let rangeFilters = new RangeFilters(temperatureFilters, '.js-range-temperature');
+  }
+
+  let lightingFilters = document.querySelector('.js-filters-lighting');
+
+  if (lightingFilters) {
+    let rangeFilters = new RangeFilters(lightingFilters, '.js-range-lighting');
+  }
+
+  // Подключение модальных окон
+
+  let temperatureModal = new Modal('temperatureModal');
+  let lightingModal = new Modal('lightingModal');
+  let roundModal = new Modal('roundModal');
 
 
+  let buttonsOpenModal = document.querySelectorAll('.js-open-modal');
 
-  // var fixed = document.getElementById('fixed');
-  // console.log(fixed);
-  //
-  // fixed.addEventListener('touchmove', function(e) {
-  //
-  //     e.preventDefault();
-  //
-  // }, false);
+  for (var i = 0; i < buttonsOpenModal.length; i++) {
+    let type = buttonsOpenModal[i].getAttribute('data-modal-type');
+
+    switch(type) {
+      case 'temperature':
+        buttonsOpenModal[i].addEventListener('click', function(){
+          temperatureModal.open();
+        });
+        break;
+      case 'lighting':
+        buttonsOpenModal[i].addEventListener('click', function(){
+          lightingModal.open();
+        });
+        break;
+      case 'round':
+        buttonsOpenModal[i].addEventListener('click', function(){
+          roundModal.open();
+        });
+        break;
+    }
+  }
+})();
+// 
+// const isIosDevice =
+//   typeof window !== 'undefined' &&
+//   window.navigator &&
+//   window.navigator.platform &&
+//   /iPad|iPhone|iPod|(iPad Simulator)|(iPhone Simulator)|(iPod Simulator)/.test(window.navigator.platform);
+//
+//
+// console.log(isIosDevice);
+//
+// let test = document.querySelector('body');
