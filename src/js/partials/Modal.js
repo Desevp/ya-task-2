@@ -66,7 +66,6 @@ class Modal {
     }
     document.body.style.height = 'calc(100% + ' + document.body._scrollTop+'px)';
     document.body.style.top = -document.body._scrollTop + 'px';
-    document.body.style.paddingTop = document.body._scrollTop + 'px';
   }
 
   showScroll() {
@@ -74,7 +73,6 @@ class Modal {
     document.body.style.width = '';
     document.body.style.height = '';
     document.body.style.top = '';
-    document.body.style.paddingTop = '';
     window.scroll(0, document.body._scrollTop);
     document.body.classList.remove('is-fixed-overlay');
   }
