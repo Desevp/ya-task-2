@@ -19,14 +19,61 @@ class Modal {
   open() {
     this.overlay.classList.add('overlay--is-show');
     this.modal.classList.add('popup--is-open');
-    this.page.classList.add('is-fixed-overlay');
     this.blurEl.classList.add('is-blur');
+    this.hideScroll();
   }
 
   close() {
     this.modal.classList.remove('popup--is-open');
     this.overlay.classList.remove('overlay--is-show');
-    this.page.classList.remove('is-fixed-overlay');
     this.blurEl.classList.remove('is-blur');
+    this.showScroll();
+  }
+
+  _getScrollbarSize() {
+    let outer = document.createElement('div');
+    outer.style.visibility = 'hidden';
+    outer.style.width = '100px';
+    outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+
+    document.body.appendChild(outer);
+
+    let widthNoScroll = outer.offsetWidth;
+    outer.style.overflow = 'scroll';
+
+    let inner = document.createElement('div');
+    inner.style.width = '100%';
+    outer.appendChild(inner);
+
+    let widthWithScroll = inner.offsetWidth;
+
+    outer.parentNode.removeChild(outer);
+    return widthNoScroll - widthWithScroll;
+  }
+
+  _hasScrollbar() {
+    return document.body.scrollHeight > document.body.clientHeight;
+  }
+
+  hideScroll() {
+    document.body.classList.add('is-fixed-overlay');
+    document.body._scrollTop = window.pageYOffset;
+    document.body.style.position = 'fixed';
+    if (this._hasScrollbar()) {
+      document.body.style.width = `calc(100% - ${this._getScrollbarSize()}px)`;
+    } else {
+      document.body.style.width = '100%';
+    }
+    document.body.style.height = 'calc(100% + '+document.body._scrollTop+'px)';
+    document.body.style.top = -document.body._scrollTop + 'px';
+  }
+
+  showScroll() {
+    document.body.classList.remove('is-fixed-overlay');
+    document.body.style.position = '';
+    document.body.style.width = '';
+    document.body.style.height = '';
+    document.body.style.top = '';
+    window.scroll(0, document.body.scrollTop);
   }
 }
