@@ -69,11 +69,11 @@ class Modal {
   }
 
   showScroll() {
+    document.body.style.top = '';
+    document.body.classList.remove('is-fixed-overlay');
     document.body.style.position = '';
     document.body.style.width = '';
     document.body.style.height = '';
-    document.body.style.top = '';
     window.scroll(0, document.body._scrollTop);
-    document.body.classList.remove('is-fixed-overlay');
   }
 }
