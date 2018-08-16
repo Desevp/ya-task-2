@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Яндекс Дом</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+    <script>
+      // Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+  <body>
+    <div class="page__inner">
+      <div class="page__content">
+        <header class="header">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__logo logo">
+                <a class="link link--absolute" href="#"></a>
+                <picture class="logo__img">
+                    <source type="image/svg+xml" srcset="images/logo.svg">
+                    <img src="images/logo.png" srcset="images/logo@2x.png 2x" alt="logo">
+                </picture>
+              </div>
+              <div class="header__menu header-menu">
+                <input id="toggle" class="header-menu__toggle" type="checkbox">
+                <label class="header-menu__icon-wr" for="toggle">
+                  <div class="header-menu__icon burger js-menu">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                  </div>
+                </label>
+                <div class="nav__wr">
+                  <nav class="nav">
+                    <a class="nav__item nav__item--is-active" href="#">Сводка</a>
+                    <a class="nav__item" href="#">Устройства</a>
+                    <a class="nav__item" href="#">Сценарии</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header__pseudo"></div>
+
+        <main role="main">
+          <div class="container">
+            <div class="top-section">
+              <section class="section top-section__left">
+                <h2 class="section__title">Главное</h2>
+                <div class="section__inner">
+                  <div class="main-block">
+                    <div class="main-block__info">
+                        <h2 class="main-block__title">Привет,
+                          <span>Геннадий</span>!</h2>
+                        <div class="main-block__description">
+                          Двери и окна закрыты, сигнализация включена.
+                        </div>
+                        <div class="main-block__weather weather">
+                          <div class="weather__item">
+                            <div class="weather__title">
+                              Дома
+                            </div>
+                            <div class="weather__temperature">
+                              +23
+                            </div>
+                          </div>
+                          <div class="weather__item">
+                            <div class="weather__title">
+                              За окном
+                            </div>
+                            <div class="weather__temperature">
+                              +19
+                            </div>
+                            <div class="weather__picture">
+                              <picture class="logo__img">
+                                  <source type="image/svg+xml" srcset="images/cloud-drizzle.svg">
+                                  <img src="images/cloud-drizzle.png" srcset="images/cloud-drizzle@2x.png 2x" alt="wheater">
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="main-block__planned planned-slider">
+                        <div class="planned-slider__inner">
+                          <div class="planned-slider__content">
+                            <div class="planned-slider__item tuning-block js-open-modal" data-modal-type="temperature">
+                              <div class="tuning-block__icon status-icon status-icon--temperature-off">
+                              </div>
+                              <div class="tuning-block__content">
+                                <div class="tuning-block__title">
+                                  Philips Cooler
+                                </div>
+                                <div class="tuning-block__description">
+                                  Начнет охлаждать в&nbsp;16.30
+                                </div>
+                              </div>
+                            </div>
+                            <div class="planned-slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                              <div class="tuning-block__icon status-icon status-icon--sun-off">
+                              </div>
+                              <div class="tuning-block__content">
+                                <div class="tuning-block__title">
+                                  Xiaomi Yeelight LED Smart Bulb
+                                </div>
+                                <div class="tuning-block__description">
+                                  Включится в&nbsp;17.00
+                                </div>
+                              </div>
+                            </div>
+                            <div class="planned-slider__item tuning-block js-open-modal" data-modal-type="round">
+                              <div class="tuning-block__icon status-icon status-icon--sun">
+                              </div>
+                              <div class="tuning-block__content">
+                                <div class="tuning-block__title">
+                                  Xiaomi Mi Air Purifier 2S
+                                </div>
+                                <div class="tuning-block__description">
+                                  Выключится в&nbsp;20.00
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+              <section class="section top-section__right scripts-section">
+                <div class="section__title-wr">
+                  <h2 class="section__title">Избранные сценарии</h2>
+                  <div class="slider-arrows js-script-slider-btns slider-arrows--is-hidden">
+                    <div class="slider-arrows__btn slider-arrows__btn--prev"></div>
+                    <div class="slider-arrows__btn slider-arrows__btn--next"></div>
+                  </div>
+                </div>
+                <div class="section__inner">
+                  <div class="script-slider slider slider--overflow slider--page js-script-slider">
+                    <div class="slider__inner">
+                      <div class="slider__page">
+                        <div class="slider__item tuning-block tuning-block--less-height js-open-modal" data-modal-type="temperature">
+                          <div class="tuning-block__icon status-icon status-icon--sun">
+                          </div>
+                          <div class="tuning-block__content">
+                            <div class="tuning-block__title">
+                              Выключить весь свет в&nbsp;доме и&nbsp;во&nbsp;дворе
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slider__item tuning-block tuning-block--less-height js-open-modal" data-modal-type="round">
+                          <div class="tuning-block__icon status-icon status-icon--scheduled">
+                          </div>
+                          <div class="tuning-block__content">
+                            <div class="tuning-block__title">
+                              Я ухожу
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slider__item tuning-block tuning-block--less-height js-open-modal" data-modal-type="lighting">
+                          <div class="tuning-block__icon status-icon status-icon--sun">
+                          </div>
+                          <div class="tuning-block__content">
+                            <div class="tuning-block__title">
+                              Включить свет в&nbsp;коридоре
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slider__item tuning-block tuning-block--less-height js-open-modal" data-modal-type="lighting">
+                          <div class="tuning-block__icon status-icon--temperature">
+                          </div>
+                          <div class="tuning-block__content">
+                            <div class="tuning-block__title">
+                              Набрать горячую ванну
+                            </div>
+                            <div class="tuning-block__description">
+                              Начнется в&nbsp;18.00
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slider__item tuning-block tuning-block--less-height js-open-modal" data-modal-type="lighting">
+                          <div class="tuning-block__icon status-icon--temperature">
+                          </div>
+                          <div class="tuning-block__content">
+                            <div class="tuning-block__title">
+                              Сделать пол тёплым во всей квартире
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider__page">
+                        <div class="slider__item tuning-block tuning-block--less-height js-open-modal" data-modal-type="lighting">
+                          <div class="tuning-block__icon status-icon--temperature">
+                          </div>
+                          <div class="tuning-block__content">
+                            <div class="tuning-block__title">
+                              Сделать пол тёплым во всей квартире
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+            </div>
+          </div>
+          <section class="section devices-section">
+            <div class="container">
+              <div class="section__title-wr">
+                <h2 class="section__title">Избранные устройства</h2>
+                <div class="section__panel">
+                  <div class="devices-section__filters filters">
+                    <div class="filters__item filters__item--is-active" data-value="All">
+                      Все
+                    </div>
+                    <div class="filters__item" data-value="kitchen">
+                      Кухня
+                    </div>
+                    <div class="filters__item" data-value="hall">
+                      Зал
+                    </div>
+                    <div class="filters__item" data-value="bulb">
+                      Лампочки
+                    </div>
+                    <div class="filters__item" data-value="cameras">
+                      Камеры
+                    </div>
+                  </div>
+                  <div class="filters-mobile">
+                    <select class="filters-mobile__select">
+                      <option class="filters-mobile__item" data-value="All" selected="selected">Все</option>
+                      <option class="filters-mobile__item" data-value="kitchen">Кухня</option>
+                      <option class="filters-mobile__item" data-value="hall">Зал</option>
+                      <option class="filters-mobile__item" data-value="bulb">Лампочки</option>
+                      <option class="filters-mobile__item" data-value="cameras">Камеры</option>
+                    </select>
+                  </div>
+                  <div class="slider-arrows devices-section__arrows js-device-slider-btns slider-arrows--is-hidden">
+                    <div class="slider-arrows__btn slider-arrows__btn--prev"></div>
+                    <div class="slider-arrows__btn slider-arrows__btn--next"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__inner">
+                <div class="device-slider slider slider--overflow js-device-slider">
+                  <div class="slider__inner">
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                      <div class="tuning-block__icon status-icon status-icon--sun">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          Xiaomi Yeelight LED Smart Bulb
+                        </div>
+                        <div class="tuning-block__description">
+                          Включено
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                      <div class="tuning-block__icon status-icon status-icon--sun-off">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          D-Link Omna 180 Cam
+                        </div>
+                        <div class="tuning-block__description">
+                          Выключено
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="temperature">
+                      <div class="tuning-block__icon status-icon status-icon--temperature">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          Elgato Eve Degree Connected
+                        </div>
+                        <div class="tuning-block__description">
+                          Выключено до&nbsp;17:00
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                      <div class="tuning-block__icon status-icon status-icon--sun-off">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          LIFX Mini Day & Dusk A60 E27
+                        </div>
+                        <div class="tuning-block__description">
+                          Включится в 17:00
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                      <div class="tuning-block__icon status-icon status-icon--sun">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          Xiaomi Mi Air Purifier 2S
+                        </div>
+                        <div class="tuning-block__description">
+                          Включено
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                      <div class="tuning-block__icon status-icon status-icon--sun-off">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          Philips Zhirui
+                        </div>
+                        <div class="tuning-block__description">
+                          Выключено
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__item tuning-block js-open-modal" data-modal-type="lighting">
+                      <div class="tuning-block__icon status-icon status-icon--sun">
+                      </div>
+                      <div class="tuning-block__content">
+                        <div class="tuning-block__title">
+                          Xiaomi Mi Air Purifier 2S
+                        </div>
+                        <div class="tuning-block__description">
+                          Включено
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div class="page__footer">
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__inner">
+              <div class="footer__menu">
+                <ul class="list">
+                  <li class="list__item">
+                    <a class="link footer__link" href="#">Помощь</a>
+                  </li>
+                  <li class="link list__item">
+                    <a class="footer__link" href="#">Обратная связь</a>
+                  </li>
+                  <li class="link list__item">
+                    <a class="footer__link" href="#">Разработчикам</a>
+                  </li>
+                  <li class="link list__item">
+                    <a class="footer__link" href="#">Условия использования</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__copyright copyright">
+                <span>&copy;&nbsp;2001&ndash;2017&nbsp;ООО &laquo;</span><a class="footer__link" href="#">Яндекс</a><span>&raquo;</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+    <div class="popup js-popup" id="temperatureModal">
+      <div class="popup__main">
+        <div class="popup__top">
+          <h2 class="popup__title">
+            Elgato Eve Degree Connected
+          </h2>
+          <div class="popup__other">
+            <div class="popup__current-value">
+              +23
+            </div>
+            <div class="popup__icon status-icon status-icon--sun">
+            </div>
+          </div>
+        </div>
+        <div class="popup__description">
+          Включено
+        </div>
+        <div class="popup__content">
+          <div class="filters popup__filters js-filters-temperature">
+            <div class="filters__item filters__item--is-active" data-value="manual">
+              Вручную
+            </div>
+            <div class="filters__item" data-value="-5">
+              Холодно
+            </div>
+            <div class="filters__item" data-value="16">
+              Тепло
+            </div>
+            <div class="filters__item" data-value="25">
+              Жарко
+            </div>
+          </div>
+          <div class="popup__range range__wr">
+            <div class="range__caption range__caption--text range__caption--left">
+              -10
+            </div>
+            <div class="range__caption range__caption--text range__caption--right">
+              +30
+            </div>
+            <input class="range range--temperature js-range-temperature" type="range" min="-10" max="30" step="1" value="17">
+          </div>
+        </div>
+      </div>
+      <div class="popup__buttons-wr">
+        <button class="popup__button popup__apply" type="button" name="apply">Применить</button>
+        <button class="popup__button popup__close" type="button" name="close">Закрыть</button>
+      </div>
+    </div>
+    <div class="popup js-popup" id="lightingModal">
+      <div class="popup__main">
+        <div class="popup__top">
+          <h2 class="popup__title">
+            Xiaomi Yeelight LED Smart Bulb
+          </h2>
+          <div class="popup__other">
+            <div class="popup__icon status-icon status-icon--sun">
+            </div>
+          </div>
+        </div>
+        <div class="popup__description">
+          Включится в&nbsp;17:00
+        </div>
+        <div class="popup__content">
+          <div class="filters popup__filters js-filters-lighting">
+            <div class="filters__item filters__item--is-active" data-value="manual">
+              Вручную
+            </div>
+            <div class="filters__item" data-value="2">
+              Дневной свет
+            </div>
+            <div class="filters__item" data-value="8">
+              Вечерний свет
+            </div>
+          </div>
+          <div class="popup__range range__wr">
+            <div class="range__caption range__caption--icon range__caption--left">
+              <picture>
+                  <source type="image/svg+xml" srcset="images/icon_sun_min.svg">
+                  <img src="images/icon_sun_min.png" srcset="images/icon_sun_min@2x.png 2x" alt="min">
+              </picture>
+            </div>
+            <div class="range__caption range__caption--icon range__caption--right">
+              <picture>
+                  <source type="image/svg+xml" srcset="images/icon_sun_max.svg">
+                  <img src="images/icon_sun_max.png" srcset="images/icon_sun_max@2x.png 2x" alt="max">
+              </picture>
+            </div>
+            <input class="range range--lighting js-range-lighting" type="range" min="0" max="10">
+          </div>
+        </div>
+      </div>
+      <div class="popup__buttons-wr">
+        <button class="popup__button popup__apply" type="button" name="apply">Применить</button>
+        <button class="popup__button popup__close" type="button" name="close">Закрыть</button>
+      </div>
+    </div>
+    <div class="popup js-popup" id="roundModal">
+      <div class="popup__main">
+        <div class="popup__top">
+          <h2 class="popup__title">
+            Xiaomi Warm Floor
+          </h2>
+          <div class="popup__other">
+            <div class="popup__current-value">
+              +23
+            </div>
+            <div class="popup__icon status-icon status-icon--sun">
+            </div>
+          </div>
+        </div>
+        <div class="popup__description">
+          Включено
+        </div>
+        <div class="popup__content">
+          <div class="round-slider__wr popup__round-slider js-round-slider">
+            <div class="round-slider__scale">
+              <svg width="222px" height="221px" viewBox="0 0 222 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                     <clipPath id="ticks">
+                          <path d="M110.50815,0 L111.49477,0 L111.49477,21.7079727 L110.50815,21.7079727 L110.50815,0 Z M116.249023,0.123389127 L117.234291,0.175024828 L116.098184,21.8532475 L115.112916,21.8016118 L116.249023,0.123389127 Z M121.975747,0.544860066 L122.956962,0.647989939 L120.687861,22.2370441 L119.706646,22.1339142 L121.975747,0.544860066 Z M127.672857,1.26327576 L128.64733,1.41761713 L125.251455,22.8583287 L124.276982,22.7039873 L127.672857,1.26327576 Z M133.324969,2.27669729 L134.290029,2.48182712 L129.776688,23.7154286 L128.811628,23.5102987 L133.324969,2.27669729 Z M138.916821,3.58238913 L139.869823,3.83774518 L134.251386,24.8060367 L133.298384,24.5506806 L138.916821,3.58238913 Z M144.433313,5.17682651 L145.371645,5.48170886 L138.663512,26.1272178 L137.725181,25.8223354 L144.433313,5.17682651 Z M149.859548,7.05570496 L150.780638,7.40927794 L143.001196,27.6754164 L142.080107,27.3218434 L149.859548,7.05570496 Z M155.180875,9.21395187 L156.082197,9.61524638 L147.252769,29.4464663 L146.351447,29.0451718 L155.180875,9.21395187 Z M160.382922,11.6457403 L161.262007,12.0936564 L151.406794,31.4356017 L150.527709,30.9876856 L160.382922,11.6457403 Z M165.451643,14.3445045 L166.306081,14.8378145 L155.452095,33.6374704 L154.597657,33.1441604 L165.451643,14.3445045 Z M170.373351,17.302958 L171.2008,17.8403098 L159.377791,36.0461476 L158.550342,35.5087958 L170.373351,17.302958 Z M175.134755,20.5131129 L175.932947,21.0930336 L163.173321,38.6551524 L162.375129,38.0752317 L175.134755,20.5131129 Z M179.722997,23.9663016 L180.489744,24.5872016 L166.828474,41.457465 L166.061727,40.8365649 L179.722997,23.9663016 Z M184.125686,27.6532002 L184.858888,28.3133778 L170.333419,44.4455454 L169.600217,43.7853678 L184.125686,27.6532002 Z M188.330935,31.5638537 L189.028581,32.2614994 L173.678726,47.6113541 L172.981081,46.9137084 L188.330935,31.5638537 Z M192.327387,35.687703 L192.987565,36.4209045 L176.855397,50.9463735 L176.195219,50.2131719 L192.327387,35.687703 Z M196.10425,40.013613 L196.72515,40.7803608 L179.854886,54.4416307 L179.233986,53.6748829 L196.10425,40.013613 Z M199.651323,44.5299032 L200.231244,45.3280955 L182.669125,58.0877218 L182.089205,57.2895294 L199.651323,44.5299032 Z M202.95903,49.2243788 L203.496382,50.0518279 L185.290544,61.8748372 L184.753192,61.0473881 L202.95903,49.2243788 Z M206.018437,54.0843638 L206.511747,54.9388018 L187.712091,65.7927881 L187.218781,64.9383501 L206.018437,54.0843638 Z M208.726173,58.9326796 L209.189363,59.8038134 L190.022361,69.9950893 L189.559171,69.1239555 L208.726173,58.9326796 Z M211.273603,64.0791506 L211.690567,64.973332 L192.016462,74.1475177 L191.599499,73.2533363 L211.273603,64.0791506 Z M213.550283,69.3510269 L213.919878,70.265805 L193.792596,78.3977547 L193.423001,77.4829766 L213.550283,69.3510269 Z M215.550064,74.7340734 L215.871276,75.666941 L195.345985,82.7343656 L195.024772,81.801498 L215.550064,74.7340734 Z M217.267544,80.213755 L217.539494,81.162155 L196.672451,87.1456832 L196.400502,86.1972832 L217.267544,80.213755 Z M218.698086,85.7752751 L218.920027,86.7366081 L197.768428,91.6198394 L197.546487,90.6585064 L218.698086,85.7752751 Z M219.837824,91.4036164 L220.009149,92.3752474 L198.630969,96.1447973 L198.459644,95.1731663 L219.837824,91.4036164 Z M220.683681,97.083581 L220.80392,98.0628469 L199.257755,100.708383 L199.137516,99.7291174 L220.683681,97.083581 Z M221.23337,102.799832 L221.302193,103.784048 L199.6471,105.29832 L199.578277,104.314103 L221.23337,102.799832 Z M221.485407,108.536933 L221.502626,109.523402 L199.797959,109.902259 L199.78074,108.915789 L221.485407,108.536933 Z M221.439109,114.279393 L221.404677,115.265412 L199.709928,114.507814 L199.744361,113.521795 L221.439109,114.279393 Z M221.094601,120.011705 L221.008612,120.994571 L199.383244,119.102596 L199.469234,118.11973 L221.094601,120.011705 Z M220.452812,125.718391 L220.315501,126.695409 L198.818789,123.674243 L198.9561,122.697225 L220.452812,125.718391 Z M219.515473,131.38404 L219.327217,132.352533 L198.018081,128.210457 L198.206337,127.241964 L219.515473,131.38404 Z M218.285115,136.993355 L218.04643,137.950668 L196.983277,132.699034 L197.221962,131.741721 L218.285115,136.993355 Z M216.765059,142.531186 L216.476599,143.474696 L195.717161,137.127899 L196.005621,136.184389 L216.765059,142.531186 Z M214.959408,147.982582 L214.621964,148.909702 L194.223142,141.485138 L194.560586,140.558018 L214.959408,147.982582 Z M212.873037,153.33282 L212.487534,154.241009 L192.505239,145.759028 L192.890742,144.85084 L212.873037,153.33282 Z M210.511579,158.567454 L210.079073,159.454222 L190.568076,149.938073 L191.000582,149.051305 L210.511579,158.567454 Z M207.881409,163.672348 L207.403086,164.535265 L188.416865,154.011031 L188.895188,153.148114 L207.881409,163.672348 Z M204.989629,168.633716 L204.4668,169.470418 L186.057395,157.966945 L186.580224,157.130243 L204.989629,168.633716 Z M201.844047,173.438162 L201.278145,174.246354 L183.496015,161.795172 L184.061917,160.98698 L201.844047,173.438162 Z M198.453155,178.072711 L197.845731,178.850178 L180.739615,165.485415 L181.347039,164.707948 L198.453155,178.072711 Z M194.82611,182.524847 L194.178829,183.269459 L177.795614,169.027747 L178.442895,168.283136 L194.82611,182.524847 Z M190.972704,186.782549 L190.28734,187.492264 L174.671931,172.412639 L175.357295,171.702924 L190.972704,186.782549 Z M186.903342,190.834318 L186.181774,191.507192 L171.376972,175.630985 L172.09854,174.958112 L186.903342,190.834318 Z M182.629012,194.669214 L181.873217,195.303401 L167.919601,178.674129 L168.675396,178.039942 L182.629012,194.669214 Z M178.161254,198.276879 L177.373305,198.870642 L164.309121,181.533884 L165.09707,180.940121 L178.161254,198.276879 Z M173.512134,201.647571 L172.694189,202.199282 L160.555245,184.202557 L161.37319,183.650846 L173.512134,201.647571 Z M168.694203,204.772188 L167.848505,205.280335 L156.668073,186.672971 L157.513771,186.164824 L168.694203,204.772188 Z M163.720472,207.642292 L162.849339,208.105482 L152.658063,188.93848 L153.529196,188.47529 L163.720472,207.642292 Z M158.60437,210.250132 L157.710189,210.667095 L148.536003,190.99299 L149.430185,190.576027 L158.60437,210.250132 Z M153.359713,212.588664 L152.444934,212.958258 L144.312985,192.830976 L145.227763,192.461382 L153.359713,212.588664 Z M148.00066,214.651573 L147.067793,214.972785 L140.000368,194.447494 L140.933236,194.126282 L148.00066,214.651573 Z M142.541684,216.433289 L141.593284,216.705238 L135.609756,195.838195 L136.558156,195.566246 L142.541684,216.433289 Z M136.997525,217.928998 L136.036192,218.150939 L131.152961,196.99934 L132.114294,196.777399 L136.997525,217.928998 Z M131.383153,219.134662 L130.411522,219.305987 L126.641972,197.927807 L127.613603,197.756482 L131.383153,219.134662 Z M125.713729,220.047023 L124.734463,220.167262 L122.088927,198.621097 L123.068193,198.500858 L125.713729,220.047023 Z M120.004561,220.663618 L119.020345,220.732441 L117.506073,199.077348 L118.49029,199.008525 L120.004561,220.663618 Z M114.271067,220.98278 L113.284597,220.999999 L112.90574,199.295333 L113.89221,199.278114 L114.271067,220.98278 Z M108.718323,220.999999 L107.731853,220.98278 L108.110709,199.278114 L109.097179,199.295333 L108.718323,220.999999 Z M102.982575,220.732441 L101.998358,220.663618 L103.51263,199.008525 L104.496846,199.077348 L102.982575,220.732441 Z M97.2684562,220.167262 L96.2891903,220.047023 L98.9347267,198.500858 L99.9139926,198.621097 L97.2684562,220.167262 Z M91.5913971,219.305987 L90.6197661,219.134662 L94.389316,197.756482 L95.360947,197.927807 L91.5913971,219.305987 Z M85.9667272,218.150939 L85.0053942,217.928998 L89.8886256,196.777399 L90.8499586,196.99934 L85.9667272,218.150939 Z M80.409635,216.705238 L79.461235,216.433289 L85.4447632,195.566246 L86.3931632,195.838195 L80.409635,216.705238 Z M74.9351265,214.972785 L74.002259,214.651573 L81.0696836,194.126282 L82.0025511,194.447494 L74.9351265,214.972785 Z M69.5579848,212.958258 L68.6432067,212.588664 L76.7751564,192.461382 L77.6899345,192.830976 L69.5579848,212.958258 Z M64.2927302,210.667095 L63.3985488,210.250132 L72.5727345,190.576027 L73.4669159,190.99299 L64.2927302,210.667095 Z M59.1535807,208.105482 L58.282447,207.642292 L68.4737229,188.47529 L69.3448566,188.93848 L59.1535807,208.105482 Z M54.1544142,205.280335 L53.3087158,204.772188 L64.4891483,186.164824 L65.3348467,186.672971 L54.1544142,205.280335 Z M49.3087304,202.199282 L48.4907854,201.647571 L60.6297297,183.650846 L61.4476747,184.202557 L49.3087304,202.199282 Z M44.6296146,198.870642 L43.8416648,198.276879 L56.9058489,180.940121 L57.6937987,181.533884 L44.6296146,198.870642 Z M40.1297024,195.303401 L39.3739076,194.669214 L53.3275235,178.039942 L54.0833183,178.674129 L40.1297024,195.303401 Z M35.8211456,191.507192 L35.0995774,190.834318 L49.9043792,174.958112 L50.6259474,175.630985 L35.8211456,191.507192 Z M31.7155793,187.492264 L31.0302154,186.782549 L46.6456242,171.702924 L47.3309881,172.412639 L31.7155793,187.492264 Z M27.8240904,183.269459 L27.1768094,182.524847 L43.5600244,168.283136 L44.2073054,169.027747 L27.8240904,183.269459 Z M24.1571879,178.850178 L23.549764,178.072711 L40.6558799,164.707948 L41.2633038,165.485415 L24.1571879,178.850178 Z M20.7247743,174.246354 L20.1588723,173.438162 L37.9410026,160.98698 L38.5069045,161.795172 L20.7247743,174.246354 Z M17.536119,169.470418 L17.01329,168.633716 L35.422695,157.130243 L35.9455239,157.966945 L17.536119,169.470418 Z M14.5998331,164.535265 L14.1215102,163.672348 L33.107731,153.148114 L33.5860538,154.011031 L14.5998331,164.535265 Z M11.9238464,159.454222 L11.4913406,158.567454 L31.0023373,149.051305 L31.434843,149.938073 L11.9238464,159.454222 Z M9.51538568,154.241009 L9.12988253,153.33282 L29.1121768,144.85084 L29.4976799,145.759028 L9.51538568,154.241009 Z M7.38095547,148.909702 L7.04351156,147.982582 L27.4423333,140.558018 L27.7797773,141.485138 L7.38095547,148.909702 Z M5.52632028,143.474696 L5.23786051,142.531186 L25.9972981,136.184389 L26.2857578,137.127899 L5.52632028,143.474696 Z M3.95648911,137.950668 L3.71780413,136.993355 L24.7809573,131.741721 L25.0196423,132.699034 L3.95648911,137.950668 Z M2.67570192,132.352533 L2.48744595,131.38404 L23.7965821,127.241964 L23.984838,128.210457 L2.67570192,132.352533 Z M1.68741818,126.695409 L1.55010721,125.718391 L23.0468194,122.697225 L23.1841304,123.674243 L1.68741818,126.695409 Z M0.994307499,120.994571 L0.9083179,120.011705 L22.5336852,118.11973 L22.6196748,119.102596 L0.994307499,120.994571 Z M0.598242442,115.265412 L0.563809901,114.279393 L22.2585587,113.521795 L22.2929913,114.507814 L0.598242442,115.265412 Z M0.50029346,109.523402 L0.517512353,108.536933 L22.2221788,108.915789 L22.20496,109.902259 L0.50029346,109.523402 Z M0.700725992,103.784048 L0.769549124,102.799832 L22.4246423,104.314103 L22.3558192,105.29832 L0.700725992,103.784048 Z M1.19899975,98.0628469 L1.31923849,97.083581 L22.8654033,99.7291174 L22.7451645,100.708383 L1.19899975,98.0628469 Z M1.99377019,92.3752474 L2.16509496,91.4036164 L23.5432748,95.1731663 L23.37195,96.1447973 L1.99377019,92.3752474 Z M3.08289211,86.7366081 L3.30483332,85.7752751 L24.4564321,90.6585064 L24.2344909,91.6198394 L3.08289211,86.7366081 Z M4.46342546,81.162155 L4.73537478,80.213755 L25.6024175,86.1972832 L25.3304681,87.1456832 L4.46342546,81.162155 Z M6.13164327,75.666941 L6.45285532,74.7340734 L26.9781468,81.801498 L26.6569347,82.7343656 L6.13164327,75.666941 Z M8.08304173,70.265805 L8.45263609,69.3510269 L28.5799179,77.4829766 L28.2103236,78.3977547 L8.08304173,70.265805 Z M10.3123523,64.973332 L10.729316,64.0791506 L30.4034207,73.2533363 L29.9864571,74.1475177 L10.3123523,64.973332 Z M12.8135561,59.8038134 L13.2767461,58.9326796 L32.4437484,69.1239555 L31.9805583,69.9950893 L12.8135561,59.8038134 Z M15.4911725,54.9388018 L15.9844825,54.0843638 L34.7841384,64.9383501 L34.2908284,65.7927881 L15.4911725,54.9388018 Z M18.5065375,50.0518279 L19.0438892,49.2243788 L37.2497271,61.0473881 L36.7123753,61.8748372 L18.5065375,50.0518279 Z M21.7716751,45.3280955 L22.3515958,44.5299032 L39.9137147,57.2895294 L39.333794,58.0877218 L21.7716751,45.3280955 Z M25.2777697,40.7803608 L25.8986697,40.013613 L42.7689331,53.6748829 L42.148033,54.4416307 L25.2777697,40.7803608 Z M29.0153546,36.4209045 L29.6755322,35.687703 L45.8076998,50.2131719 L45.1475222,50.9463735 L29.0153546,36.4209045 Z M32.9743383,32.2614994 L33.671984,31.5638537 L49.0218387,46.9137084 L48.324193,47.6113541 L32.9743383,32.2614994 Z M37.1440313,28.3133778 L37.8772328,27.6532002 L52.4027018,43.7853678 L51.6695002,44.4455454 L37.1440313,28.3133778 Z M41.513175,24.5872016 L42.2799227,23.9663016 L55.9411926,40.8365649 L55.1744448,41.457465 L41.513175,24.5872016 Z M46.0699722,21.0930336 L46.8681645,20.5131129 L59.6277907,38.0752317 L58.8295984,38.6551524 L46.0699722,21.0930336 Z M50.802119,17.8403098 L51.6295681,17.302958 L63.4525774,35.5087958 L62.6251283,36.0461476 L50.802119,17.8403098 Z M55.6968379,14.8378145 L56.5512758,14.3445045 L67.4052622,33.1441604 L66.5508242,33.6374704 L55.6968379,14.8378145 Z M60.7409123,12.0936564 L61.6199972,11.6457403 L71.4752106,30.9876856 L70.5961257,31.4356017 L60.7409123,12.0936564 Z M65.9207224,9.61524638 L66.8220446,9.21395187 L75.6514726,29.0451718 L74.7501504,29.4464663 L65.9207224,9.61524638 Z M71.2222816,7.40927794 L72.1433708,7.05570496 L79.9228124,27.3218434 L79.0017233,27.6754164 L71.2222816,7.40927794 Z M76.6312748,5.48170886 L77.5696061,5.17682651 L84.2777386,25.8223354 L83.3394072,26.1272178 L76.6312748,5.48170886 Z M82.1330963,3.83774518 L83.086098,3.58238913 L88.7045348,24.5506806 L87.751533,24.8060367 L82.1330963,3.83774518 Z M87.71289,2.48182712 L88.67795,2.27669729 L93.1912913,23.5102987 L92.2262313,23.7154286 L87.71289,2.48182712 Z M93.3555891,1.41761713 L94.3300622,1.26327576 L97.7259373,22.7039873 L96.7514642,22.8583287 L93.3555891,1.41761713 Z M99.045957,0.647989939 L100.027172,0.544860066 L102.296273,22.1339142 L101.315058,22.2370441 L99.045957,0.647989939 Z M104.768628,0.175024828 L105.753896,0.123389127 L106.890003,21.8016118 L105.904736,21.8532475 L104.768628,0.175024828 Z" id="Rectangle-2" fill="#D8D8D8" ></path>
+                          </clipPath>
+                      <path d="M111.5,210 C166.452333,210 211,165.452333 211,110.5 C211,55.5476674 166.452333,11 111.5,11 C56.5476674,11 12,55.5476674 12,110.5 C12,165.452333 56.5476674,210 111.5,210 Z" id="scaleFill" stroke="#F5A623" stroke-width="22" stroke-dasharray="-625" stroke-dashoffset="100" clip-path="url(#ticks)"></path>
+                      <path d="M111.5,210 C166.452333,210 211,165.452333 211,110.5 C211,55.5476674 166.452333,11 111.5,11 C56.5476674,11 12,55.5476674 12,110.5 C12,165.452333 56.5476674,210 111.5,210 Z" id="scale" stroke="#979797" stroke-width="22" stroke-dasharray="625" stroke-dashoffset="0" clip-path="url(#ticks)"></path>
+                      <path d="M111.5,210 C166.452333,210 211,165.452333 211,110.5 C211,55.5476674 166.452333,11 111.5,11 C56.5476674,11 12,55.5476674 12,110.5 C12,165.452333 56.5476674,210 111.5,210 Z" id="circle" stroke="#ffffff" stroke-width="22" stroke-dasharray="625"></path>
+                  </g>
+              </svg>
+            </div>
+           <div class="round-slider ">
+
+             <div class="round-slider__inner">
+               +23
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup__buttons-wr">
+        <button class="popup__button popup__apply" type="button" name="apply">Применить</button>
+        <button class="popup__button popup__close" type="button" name="close">Закрыть</button>
+      </div>
+    </div>
+    <div class="overlay js-overlay">
+
+    </div>
+
+    <script src="js/vendors.min.js"></script>
+    <script src="js/script.min.js"></script>
+
+  </body>
+</html>
