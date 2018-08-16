@@ -12,7 +12,7 @@
     width: 14px;
     height: 14px;
     cursor: pointer;
-    background: svg-load('/images/img_to_bg/slider-arrow.svg', fill=$grey);
+    background: svg-load('../images/img_to_bg/slider-arrow.svg', fill=$grey);
     background-repeat: no-repeat;
     background-size: contain;
     transition: opacity $transition-time;

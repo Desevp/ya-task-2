@@ -5,13 +5,13 @@
   height: 330px;
   border-radius: $border-radius;
   overflow: hidden;
-  background-image: url('/images/bg@1x.png');
+  background-image: url('../images/bg@1x.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url('/images/bg@2x.png');
+    background-image: url('../images/bg@2x.png');
   }
 
   @media (max-width: $fablet) {

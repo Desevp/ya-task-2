@@ -46,27 +46,27 @@
   transition: background $transition-time;
 
   &--sun {
-    background-image: url('/images/icon_sun_2@1x.png');
-    background-image: url('/images/icon_sun_2.svg');
+    background-image: url('../images/icon_sun_2@1x.png');
+    background-image: url('../images/icon_sun_2.svg');
   }
 
   &--sun-off {
-    background-image: url('/images/icon_sun@1x.png');
-    background-image: url('/images/icon_sun.svg');
+    background-image: url('../images/icon_sun@1x.png');
+    background-image: url('../images/icon_sun.svg');
   }
 
   &--temperature {
-    background-image: url('/images/icon_temperature_2@1x.png');
-    background-image: url('/images/icon_temperature_2.svg');
+    background-image: url('../images/icon_temperature_2@1x.png');
+    background-image: url('../images/icon_temperature_2.svg');
   }
 
   &--temperature-off {
-    background-image: url('/images/icon_temperature@1x.png');
-    background-image: url('/images/icon_temperature.svg');
+    background-image: url('../images/icon_temperature@1x.png');
+    background-image: url('../images/icon_temperature.svg');
   }
 
   &--scheduled {
-    background-image: url('/images/icon_scheduled@1x.png');
-    background-image: url('/images/icon_scheduled.svg');
+    background-image: url('../images/icon_scheduled@1x.png');
+    background-image: url('../images/icon_scheduled.svg');
   }
 }
