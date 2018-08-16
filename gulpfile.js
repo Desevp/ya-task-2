@@ -28,7 +28,6 @@ var size = require('gulp-size');
 var del = require('del');
 var newer = require('gulp-newer');
 
-
 var path = {
 	build: {
 		html: 'build/',
