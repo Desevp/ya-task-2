@@ -1,6 +1,29 @@
 (function() {
+
+  // открытие мобильного меню
+
+  class toggleMenu {
+    constructor(btnClass) {
+      this.burger = document.querySelector(btnClass);
+      this.init();
+    }
+
+    init() {
+      let blurEl = document.querySelector('main');
+      let blurHeader = document.querySelector('.header__logo');
+      this.burger.addEventListener('click', function() {
+        this.classList.toggle('burger--is-active');
+        blurEl.classList.toggle('is-blur');
+        blurHeader.classList.toggle('is-blur');
+      });
+    }
+  }
+
+  new toggleMenu('.js-menu');
+
+
   // Подключение слайдеров
-  let scriptSlider = new SimpleSlider('.js-script-slider', {
+  new SimpleSlider('.js-script-slider', {
     wrapper: '.slider__inner',
     item: '.slider__item',
     margin: 15,
@@ -8,7 +31,7 @@
     btnDisablesClass: 'slider-arrows__btn--is-disabled'
   });
 
-  let deviceSlider = new SimpleSlider('.js-device-slider', {
+  new SimpleSlider('.js-device-slider', {
     wrapper: '.slider__inner',
     item: '.slider__item',
     margin: 15,
@@ -41,13 +64,13 @@
   let temperatureFilters = document.querySelector('.js-filters-temperature');
 
   if (temperatureFilters) {
-    let rangeFilters = new RangeFilters(temperatureFilters, '.js-range-temperature');
+    new RangeFilters(temperatureFilters, '.js-range-temperature');
   }
 
   let lightingFilters = document.querySelector('.js-filters-lighting');
 
   if (lightingFilters) {
-    let rangeFilters = new RangeFilters(lightingFilters, '.js-range-lighting');
+    new RangeFilters(lightingFilters, '.js-range-lighting');
   }
 
   // Подключение модальных окон
@@ -81,7 +104,7 @@
     }
   }
 })();
-// 
+//
 // const isIosDevice =
 //   typeof window !== 'undefined' &&
 //   window.navigator &&
