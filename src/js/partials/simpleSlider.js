@@ -13,10 +13,9 @@ class SimpleSlider {
       btnDisablesClass: 'is-disabled'
     }, options);
 
-    // if (!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-    //   this.init();
-    // }
-    this.init();
+    if (!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+      this.init();
+    }
 
     if ((document.body.clientWidth <= 1024) && (this.initialized)) {
       this.disable();
@@ -26,7 +25,6 @@ class SimpleSlider {
     window.addEventListener('resize', () => {
 
     this._checkArrows() ;
-
       if ((document.body.clientWidth > 1024) && !(this.initialized)) {
         this.init();
         this.wrapper.style.transform = 'translateX(0px)';
@@ -48,8 +46,8 @@ class SimpleSlider {
     this.nextBtn = this.btnWrapper.querySelector(this.options.nextBtn);
 
     this.marginItem = this.options.marginItem;
-
     this.slider.style.overflowX = 'hidden';
+    this.slider.scrollLeft = 0;
 
     this._setDefaultArrow();
 
@@ -104,7 +102,6 @@ class SimpleSlider {
   }
 
   move(direction) {
-
     let _getCountItemOffset = () => {
       return Math.floor(this.slider.offsetWidth/this.item.offsetWidth);
     }
