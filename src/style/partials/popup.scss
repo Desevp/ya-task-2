@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   max-width: 670px;
-  max-height: 100vh;
-  overflow: hidden;
+  max-height: 100%;
+  overflow: auto;
   width: 100%;
   padding: 20px;
   transform: translateX(-50%) translateY(-50%) scale(0);
@@ -13,11 +13,20 @@
   z-index: $z-index-modal;
   transition: transform $transition-time cubic-bezier(1, 0.355, 0.61, 0.215), visibility 0s $transition-time, opacity 0s $transition-time;
 
+  @media (max-width: $mobile) {
+    top: 0;
+    transform: translateX(-50%) translateY(0) scale(0);
+  }
+
   &--is-open {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(-50%) scale(1);
     transition: transform $transition-time cubic-bezier(1, 0.355, 0.61, 0.215);
+
+    @media (max-width: $mobile) {
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
   }
 
   &__main {
@@ -137,7 +146,6 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s $transition-time, opacity $transition-time*2;
-
 
   &--is-show {
     opacity: 1;

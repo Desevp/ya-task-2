@@ -56,24 +56,26 @@ class Modal {
   }
 
   hideScroll() {
-    document.body.classList.add('is-fixed-overlay');
     document.body._scrollTop = window.pageYOffset;
+    document.body.classList.add('is-fixed-overlay');
     document.body.style.position = 'fixed';
     if (this._hasScrollbar()) {
       document.body.style.width = `calc(100% - ${this._getScrollbarSize()}px)`;
     } else {
       document.body.style.width = '100%';
     }
-    document.body.style.height = 'calc(100% + '+document.body._scrollTop+'px)';
+    document.body.style.height = 'calc(100% + ' + document.body._scrollTop+'px)';
     document.body.style.top = -document.body._scrollTop + 'px';
+    document.body.style.paddingTop = document.body._scrollTop + 'px';
   }
 
   showScroll() {
-    document.body.classList.remove('is-fixed-overlay');
     document.body.style.position = '';
     document.body.style.width = '';
     document.body.style.height = '';
     document.body.style.top = '';
-    window.scroll(0, document.body.scrollTop);
+    document.body.style.paddingTop = '';
+    window.scroll(0, document.body._scrollTop);
+    document.body.classList.remove('is-fixed-overlay');
   }
 }
